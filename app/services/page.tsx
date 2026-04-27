@@ -3,6 +3,7 @@ import AnnouncementBar from '@/components/AnnouncementBar';
 import Services from '@/components/Services';
 import LocationMap from '@/components/LocationMap';
 import Footer from '@/components/Footer';
+import Script from 'next/script';
 
 export const metadata = {
   title: "Our Services",
@@ -15,9 +16,62 @@ export const metadata = {
   },
 };
 
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "Service",
+      "name": "Windscreen Repair",
+      "description": "Professional windscreen chip and crack repair services. Quick, affordable, and prevents damage from spreading.",
+      "provider": {
+        "@type": "AutoRepair",
+        "name": "Manx Autoglazing"
+      },
+      "areaServed": "Isle of Man"
+    },
+    {
+      "@type": "Service",
+      "name": "Windscreen Replacement",
+      "description": "Complete windscreen replacement using OEM quality glass. Professional installation with warranty.",
+      "provider": {
+        "@type": "AutoRepair",
+        "name": "Manx Autoglazing"
+      },
+      "areaServed": "Isle of Man"
+    },
+    {
+      "@type": "Service",
+      "name": "Mobile Service",
+      "description": "Convenient mobile windscreen repair and replacement at your location on the Isle of Man.",
+      "provider": {
+        "@type": "AutoRepair",
+        "name": "Manx Autoglazing"
+      },
+      "areaServed": "Isle of Man"
+    },
+    {
+      "@type": "Service",
+      "name": "Insurance Claims",
+      "description": "We handle insurance claims for all major providers. Hassle-free windscreen repair and replacement.",
+      "provider": {
+        "@type": "AutoRepair",
+        "name": "Manx Autoglazing"
+      },
+      "areaServed": "Isle of Man"
+    }
+  ]
+};
+
 export default function ServicesPage() {
   return (
     <div className="min-h-screen">
+      <Script
+        id="services-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+        strategy="beforeInteractive"
+      />
       <Header />
       <AnnouncementBar />
       <div>

@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Manx Autoglazing Website
+
+A modern, responsive Next.js website for Manx Autoglazing - a trusted autoglass specialist on the Isle of Man.
+
+## Features
+
+- **Modern Design**: Clean, professional design with red, black, and white color scheme
+- **Responsive**: Mobile-first design that works on all devices
+- **SEO Optimized**: Proper heading structure and meta tags
+- **Interactive Components**: Smooth scrolling, hover effects, and animations
+- **Contact Form**: Easy quote request form with email integration
+- **Service Showcase**: Comprehensive display of all autoglass services
+
+## Tech Stack
+
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first styling
+- **Lucide React** - Modern icon library
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ installed
+- npm or yarn package manager
+
+### Installation
+
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Build for Production
 
-## Learn More
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+manx-autoglazing/
+├── app/
+│   ├── globals.css       # Global styles and theme
+│   ├── layout.tsx        # Root layout with metadata
+│   └── page.tsx          # Main page
+├── components/
+│   ├── Header.tsx        # Sticky navigation header
+│   ├── Hero.tsx          # Hero section with CTA
+│   ├── Services.tsx      # Services grid
+│   ├── About.tsx         # About/trust section
+│   ├── CTAStrip.tsx      # Call-to-action banner
+│   ├── Contact.tsx       # Contact info & form
+│   └── Footer.tsx        # Footer with links
+└── public/               # Static assets
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contact Information
 
-## Deploy on Vercel
+- **Phone**: +44 7624 304585
+- **Email**: info@manxautoglazing.com
+- **Address**: Unit 22, Isle of Man Business Park, The Cooil, Braddan
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2026 Manx Autoglazing. All rights reserved.

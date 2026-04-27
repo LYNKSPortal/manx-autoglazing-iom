@@ -49,10 +49,10 @@ export const metadata: Metadata = {
     description: "Expert windscreen repair and replacement services on the Isle of Man. Insurance-friendly, mobile service available. 10+ years experience.",
     images: [
       {
-        url: "/logo.png",
+        url: "/facebook-twitter-meta.jpg",
         width: 1200,
         height: 630,
-        alt: "Manx Autoglazing Logo",
+        alt: "Manx Autoglazing - Professional Windscreen Repair & Replacement",
       },
     ],
   },
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Manx Autoglazing | Professional Windscreen Repair & Replacement Isle of Man",
     description: "Expert windscreen repair and replacement services on the Isle of Man. Insurance-friendly, mobile service available.",
-    images: ["/logo.png"],
+    images: ["/facebook-twitter-meta.jpg"],
   },
   robots: {
     index: true,

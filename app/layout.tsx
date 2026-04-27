@@ -141,6 +141,18 @@ export default function RootLayout({
         <meta name="geo.placename" content="Braddan, Isle of Man" />
         <meta name="geo.position" content="54.152806;-4.532167" />
         <meta name="ICBM" content="54.152806, -4.532167" />
+        
+        {/* Favicons */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        
+        {/* Theme color for mobile browsers */}
+        <meta name="theme-color" content="#D32F2F" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        
         <Script
           id="schema-org"
           type="application/ld+json"

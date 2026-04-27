@@ -1,0 +1,25 @@
+{
+  "name": "Manx Autoglazing - Windscreen Repair & Replacement",
+  "short_name": "Manx Autoglazing",
+  "description": "Professional windscreen repair and replacement services on the Isle of Man",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#D32F2F",
+  "background_color": "#1F1F1F",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "orientation": "portrait-primary"
+}

@@ -3,10 +3,21 @@ import AnnouncementBar from '@/components/AnnouncementBar';
 import Hero from '@/components/Hero';
 import ServicesPreview from '@/components/ServicesPreview';
 import AboutPreview from '@/components/AboutPreview';
-import Reviews from '@/components/Reviews';
 import ContactPreview from '@/components/ContactPreview';
+import Reviews from '@/components/Reviews';
 import LocationMap from '@/components/LocationMap';
 import Footer from '@/components/Footer';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Home',
+  description: 'Professional windscreen repair and replacement services on the Isle of Man. Expert technicians, insurance-friendly, mobile service available. Free quotes. Call +44 7624 304585.',
+  openGraph: {
+    title: 'Manx Autoglazing | Isle of Man Windscreen Repair & Replacement',
+    description: 'Professional windscreen repair and replacement services on the Isle of Man. Expert technicians, insurance-friendly, mobile service available.',
+    url: 'https://manxautoglazing.com',
+  },
+};
 
 export default function Home() {
   return (

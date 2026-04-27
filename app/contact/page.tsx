@@ -5,8 +5,14 @@ import LocationMap from '@/components/LocationMap';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: "Contact Us | Manx Autoglazing",
-  description: "Get in touch with Manx Autoglazing. Call +44 7624 304585 or email info@manxautoglazing.com for a free quote.",
+  title: "Contact Us",
+  description: "Get in touch with Manx Autoglazing for all your autoglass needs on the Isle of Man. Call +44 7624 304585 or email info@manxautoglazing.com. Free quotes available.",
+  keywords: "contact Manx Autoglazing, windscreen repair quote, autoglass Isle of Man contact, free quote",
+  openGraph: {
+    title: "Contact Us | Manx Autoglazing",
+    description: "Get in touch with Manx Autoglazing for all your autoglass needs on the Isle of Man.",
+    url: "https://manxautoglazing.com/contact",
+  },
 };
 
 export default function ContactPage() {

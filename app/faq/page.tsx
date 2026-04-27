@@ -5,8 +5,14 @@ import LocationMap from '@/components/LocationMap';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: "FAQ | Manx Autoglazing",
-  description: "Frequently asked questions about windscreen repairs, replacements, and autoglass services on the Isle of Man.",
+  title: "FAQ",
+  description: "Frequently asked questions about windscreen repair and replacement on the Isle of Man. Learn about our services, insurance claims, mobile repairs, and more.",
+  keywords: "windscreen FAQ, autoglass questions, insurance claims, mobile repair Isle of Man, windscreen repair cost",
+  openGraph: {
+    title: "FAQ | Manx Autoglazing",
+    description: "Frequently asked questions about our autoglass services on the Isle of Man.",
+    url: "https://manxautoglazing.com/faq",
+  },
 };
 
 export default function FAQPage() {

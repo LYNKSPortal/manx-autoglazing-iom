@@ -12,13 +12,44 @@ export default function Contact() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent('Quote Request from ' + formData.name);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nVehicle: ${formData.vehicle}\n\nMessage:\n${formData.message}`
-    );
-    window.location.href = `mailto:info@manxautoglazing.com?subject=${subject}&body=${body}`;
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          phone: '',
+          email: '',
+          vehicle: '',
+          message: '',
+        });
+        alert('Thank you for your message! We will get back to you soon.');
+      } else {
+        setSubmitStatus('error');
+        alert('There was an error sending your message. Please try calling us directly.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+      alert('There was an error sending your message. Please try calling us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -190,9 +221,10 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-[#D32F2F] text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-[#B71C1C] transition-all transform hover:scale-105 shadow-lg"
+                disabled={isSubmitting}
+                className="w-full bg-[#D32F2F] text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-[#B71C1C] transition-all transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
-                Send Quote Request
+                {isSubmitting ? 'Sending...' : 'Send Quote Request'}
               </button>
             </form>
             </div>

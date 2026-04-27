@@ -5,8 +5,14 @@ import LocationMap from '@/components/LocationMap';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: "Our Services | Manx Autoglazing",
-  description: "Comprehensive autoglass services including windscreen repairs, replacements, custom glazing, and more on the Isle of Man.",
+  title: "Our Services",
+  description: "Comprehensive autoglass solutions for all your vehicle needs on the Isle of Man. Windscreen repair, replacement, chip repair, insurance claims, mobile service. Expert technicians with 10+ years experience.",
+  keywords: "windscreen repair, windscreen replacement, chip repair, autoglass services, mobile windscreen repair, insurance claims, Isle of Man",
+  openGraph: {
+    title: "Our Services | Manx Autoglazing",
+    description: "Comprehensive autoglass solutions for all your vehicle needs on the Isle of Man.",
+    url: "https://manxautoglazing.com/services",
+  },
 };
 
 export default function ServicesPage() {

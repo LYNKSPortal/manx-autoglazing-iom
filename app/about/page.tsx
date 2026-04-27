@@ -5,8 +5,14 @@ import LocationMap from '@/components/LocationMap';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: "About Us | Manx Autoglazing",
-  description: "Learn about Manx Autoglazing - your trusted autoglass specialists on the Isle of Man with years of experience and expert technicians.",
+  title: "About Us",
+  description: "Learn more about Manx Autoglazing and our commitment to quality autoglass services on the Isle of Man. 10+ years experience, 500+ jobs completed, 100% customer satisfaction.",
+  keywords: "about Manx Autoglazing, autoglass company Isle of Man, windscreen experts, certified technicians",
+  openGraph: {
+    title: "About Us | Manx Autoglazing",
+    description: "Learn more about Manx Autoglazing and our commitment to quality autoglass services on the Isle of Man.",
+    url: "https://manxautoglazing.com/about",
+  },
 };
 
 export default function AboutPage() {

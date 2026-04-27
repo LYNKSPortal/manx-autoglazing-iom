@@ -25,7 +25,7 @@ export default function Header() {
             />
           </Link>
 
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             <Link
               href="/"
               className="text-[#1F1F1F] hover:text-[#D32F2F] transition-colors font-medium"
@@ -75,7 +75,7 @@ export default function Header() {
           </nav>
 
           <button
-            className="md:hidden flex items-center gap-2 text-[#1F1F1F] font-medium bg-[#D32F2F] text-white px-4 py-2 rounded-md hover:bg-[#B71C1C] transition-colors"
+            className="lg:hidden flex items-center gap-2 text-[#1F1F1F] font-medium bg-[#D32F2F] text-white px-4 py-2 rounded-md hover:bg-[#B71C1C] transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -86,7 +86,7 @@ export default function Header() {
 
       {/* Full-screen mobile menu overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-black md:hidden">
+        <div className="fixed inset-0 z-50 bg-black lg:hidden">
           <div className="flex flex-col h-full justify-center items-center">
             {/* Close button - top right */}
             <div className="absolute top-4 right-4">

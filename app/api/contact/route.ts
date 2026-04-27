@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
     // Email to business - with Reply-To set to customer's email
     const mailOptions = {
       from: process.env.SMTP_FROM,
-      to: 'info@manxautoglazing.com',
+      to: 'accounts@manxautoglazing.com',
       replyTo: email, // This allows you to click reply and respond directly to the customer
       subject: `New Quote Request from ${name}`,
       html: `

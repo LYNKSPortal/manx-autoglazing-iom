@@ -40,8 +40,9 @@ export default function Contact() {
         });
         alert('Thank you for your message! We will get back to you soon.');
       } else {
+        const errorData = await response.json();
         setSubmitStatus('error');
-        alert('There was an error sending your message. Please try calling us directly.');
+        alert(`There was an error sending your message: ${errorData.error || 'Unknown error'}. Please try calling us directly at +44 7624 304585.`);
       }
     } catch (error) {
       console.error('Error submitting form:', error);

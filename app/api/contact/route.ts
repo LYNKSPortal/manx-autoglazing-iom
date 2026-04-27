@@ -6,6 +6,23 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { name, phone, email, vehicle, message, insurance } = body;
 
+    // Validate required fields
+    if (!name || !phone || !email || !vehicle || !message) {
+      return NextResponse.json(
+        { error: 'Missing required fields' },
+        { status: 400 }
+      );
+    }
+
+    // Check if SMTP credentials are configured
+    if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
+      console.error('SMTP credentials not configured');
+      return NextResponse.json(
+        { error: 'Email service not configured. Please contact us directly.' },
+        { status: 500 }
+      );
+    }
+
     // Create transporter
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
